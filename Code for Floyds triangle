@@ -1,48 +1,53 @@
 #include <iostream>
 
 using namespace std;
+
 void floydsTriangle();
 
 int main()
+
 {
+
     floydsTriangle();
+
     return 0;
+
 }
 
 void floydsTriangle(){
 
     int userInput;
-    int x;
-    int arrPos=0;
+
+    int x=1;
+
     cout << "Put the number:";
+
     cin >> userInput;
+
     cout << endl;
-    if(userInput%2 == 0){
-        x = userInput * (userInput / 2) + (userInput / 2);
-    }
-    else{
-        x = userInput * ((userInput + 1) / 2);
-    }
-
-    int arr[x];
-
-    for(int a = 0; a < x; a++){
-        arr[a] = a + 1;
-    }
 
        for(int numOfRows = 1; numOfRows <= userInput; numOfRows++){
-            if(numOfRows%2 == 0){
-                for(int number = 0 ; number < numOfRows; number++){
-                    cout << arr[arrPos] << " ";
-                    arrPos++;
+
+                for(int number = 1 ; number <= numOfRows; number++){
+
+                    if(x<11){
+                        cout<<" ";
+                    }
+
+                    if(x==9){
+                    cout << x <<"";
+                    }
+
+                    else{
+                    cout << x <<" ";
+                    }
+
+                    x++;
+
                 }
-            }
-            else{
-                for(int number = 0; number < numOfRows; number++){
-                    cout << arr[arrPos] << " ";
-                    arrPos++;
-                }
-            }
+
             cout << endl;
+
         }
+
 }
