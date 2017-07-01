@@ -1,8 +1,12 @@
 #include <iostream>
+#include <iomanip>
+
 
 using namespace std;
 
 void floydsTriangle();
+
+
 
 int main()
 
@@ -13,6 +17,8 @@ int main()
     return 0;
 
 }
+
+
 
 void floydsTriangle(){
 
@@ -30,17 +36,9 @@ void floydsTriangle(){
 
                 for(int number = 1 ; number <= numOfRows; number++){
 
-                    if(x<11){
-                        cout<<" ";
-                    }
 
-                    if(x==9){
-                    cout << x <<"";
-                    }
+                    cout <<setw(4)<< x;
 
-                    else{
-                    cout << x <<" ";
-                    }
 
                     x++;
 
