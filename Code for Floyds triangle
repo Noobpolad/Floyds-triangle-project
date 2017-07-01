@@ -26,26 +26,36 @@ void floydsTriangle(){
 
     int x=1;
 
+    int y=1;
+
+    int z=0;
+
     cout << "Put the number:";
 
     cin >> userInput;
 
     cout << endl;
 
-       for(int numOfRows = 1; numOfRows <= userInput; numOfRows++){
+                    //Calculating the biggest number
 
+         for(int numOfRows = 1; numOfRows <= userInput; numOfRows++){
                 for(int number = 1 ; number <= numOfRows; number++){
-
-
-                    cout <<setw(4)<< x;
-
-
-                    x++;
-
+                    y++;
                 }
-
-            cout << endl;
-
         }
 
+                    //Number of digits in the biggest number
+
+         while (y!=0){
+                    y /= 10;
+                    ++z;
+        }
+
+       for(int numOfRows = 1; numOfRows <= userInput; numOfRows++){
+                for(int number = 1 ; number <= numOfRows; number++){
+                    cout <<setw(z+1)<< x;
+                    x++;
+                }
+                cout << endl;
+        }
 }
